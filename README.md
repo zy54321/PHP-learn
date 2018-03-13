@@ -10,11 +10,11 @@
   <p>01---基本概念</p>
   <span>
   1,PHP有两种"量"的概念,一个是 常量 , 另一个是 变量 <br />
-  &nbsp&nbsp&nbsp常量 : 不可以改变的量 <br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp变量 多数情况下,所有字母大写 多个字母命名使用下划线隔开 <br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp第一个字符:定义常量名 <br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp第二个字符:常量值 <br />
-  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp第三个字符:可选,使用常量名时,是否区分大小写,默认false 不支持 <br />
+  (1)常量 : 不可以改变的量 <br />
+    变量 多数情况下,所有字母大写 多个字母命名使用下划线隔开 <br />
+    第一个字符:定义常量名 <br />
+    第二个字符:常量值 <br />
+    第三个字符:可选,使用常量名时,是否区分大小写,默认false 不支持 <br />
   </span>
 
 </body>
