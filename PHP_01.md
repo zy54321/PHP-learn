@@ -93,6 +93,6 @@
 	<span class="token variable">$value1</span> <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
 	$<span class="token variable">$value1</span> <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">;</span> <span class="token comment">//相当于$hello = "world";</span>
 	$$<span class="token variable">$value1</span> <span class="token operator">=</span> <span class="token string">"阿斯玛"</span><span class="token punctuation">;</span>
-	<span class="token keyword">echo</span> $<span class="token variable">$hello</span><span class="token punctuation">;</span> <span class="token comment">//阿斯 玛</span>
+	<span class="token keyword">echo</span> $<span class="token variable">$hello</span><span class="token punctuation">;</span> <span class="token comment">//阿斯玛</span>
 </code></pre>
 
