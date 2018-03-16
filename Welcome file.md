@@ -5,12 +5,9 @@
 
 ### 1.1常量，不可以改变的量
   
-      在多数情况下,所有字母大写 多个字母命名使用下划线隔开
-      
+      在多数情况下,所有字母大写 多个字母命名使用下划线隔开 
       第一个字符:定义常量名
-      
       第二个字符:常量值
-      
       第三个字符:可选,使用常量名时,是否区分大小写,默认false 不支持
       
 例子:
@@ -18,11 +15,8 @@
 ```php
       
       define("NAME","好男人");
-      
       define("CAT_NAME","波斯猫",true); //true允许大小写识别,false不允许
-      
       echo cat_name;  //因为true允许大小写识别,所以能够显示CAT_NAME内容
-      
       echo NAME; //echo显示:好男人
       
 ```
@@ -33,13 +27,9 @@
       
 例子:
 ```php
-      
       $name = "小明";
-      
       $age = 18;
-      
       echo $name;
-      
  ```
 
 ### 1.3输出返回显示
@@ -57,7 +47,6 @@
 ```php
 	var_dump($flag);//bool(true)
 	var_dump($name);//string(6) "小明"
-
 	$arr = \[1.1,2,-3\];
 	var_dump($arr);//array(3) { \[0\]=> float(1.1) \[1\]=> int(2) \[2\]=> int(-3) }
 ```
@@ -89,7 +78,7 @@
 	print_r($arr);//Array ( \[0\] => 1.1 \[1\] => 2 \[2\] => -3 )
 	print_r($name);//小明
 ```
-### 1.4 引用 
+### 1.4 & 引用  
 变量或者函数、对象等前面加上&符号
 在PHP 中引用的意思是：不同的名字访问同一个变量内容。  
 与Ｃ语言中的指针是有差别的．Ｃ语言中的指针里面存储的是变量的内容，在内存中存放的地址。
@@ -102,7 +91,7 @@
 	$n = 220;  
 	echo $m; //220
 ```
-### 1.5 变量的变量
+### 1.5 $变量名 和 $$变量名 变量的变量   
 ```php
 	//变量的变量
 	$value1 = "hello";
@@ -110,9 +99,93 @@
 	$$$value1 = "阿斯玛";
 	echo $$hello; //阿斯玛
 ```
-
-
+## 2，数据类型
+### 2.1 基本概念
+主要有三种类型
+```
+1，标量类型：比如:整型integer  浮点数float/double  
+           字符串string  布尔boolean true/false
+2，复合类型：比如数组，对象
+3，特殊类型：资源类型 null
+```
+### 2.2 float double 浮点数 
+有两种，float和double
+```php
+	$a = 1.0;  
+	var_dump($a);//float(1)
+	$b = 1.134615446541316821675136321654;  
+	var_dump($b);//float(1.1346154465413)
+	$c = (float)$b;  
+	var_dump($c."~~~123");//string(21) "1.1346154465413~~~123"
+	$d = (double)1.21532165761321687615213;  
+	echo $d;//1.2153216576132
+```
+### 2.3 gettype 获取数据类型 
+```php
+	echo gettype($c);//double
+``` 
+### 2.4 （int）（string）（array）强制类型转换
+```php
+	$m = "123";
+	$n = (int)$m;
+	var_dump($n);//int(123)
+  
+	$x = 3.14;
+	$y = (string)$x;
+	var_dump($y);//string(4) "3.14"
+  
+	$z = (array)5.6;
+	var_dump($z);//array(1) {[0]=> float(5.6)}
+```
+## 3，运算符
+算术运算符和JS一样
+### 3.1 字符串拼接
+主要有三种方法
+```php
+	//字符串拼接
+	$b = "班长";
+	$c = "真白";
+	$d = $b.$c;
+	echo $d;//班长真白
+	$b .= $c;
+	echo $b;//班长真白
+```
+### 3.2 += 运算
+```php
+	//+=运算
+	$m = 1;
+	$m += 1;
+	echo $m;//2
+```
+### 3.3 比较运算符
+```php
+	//比较运算符 \> < >= <= == !=
+	$x = "1" == 1; 
+	$y = "1" === 1; //三个等号指值一样，类型也要一样
+	var_dump($x);//bool(true)
+	var_dump($y);//bool(false)
+```
+### 3.4 逻辑运算符
+```php
+	//逻辑运算符 && || !
+	$xx = true;
+	$yy = false;
+	$zz = false;
+	//异或 xor  不一样为真  
+	if ($xx xor $zz) {  
+		  echo "真";  
+	} else {  
+		  echo "假";  
+	}  
+	echo "<hr>";  
+	if ($xx xor $zz xor $yy) {  
+		  echo "真";  
+	} else {  
+		  echo "假";  
+	}
+```
+## 4，分支语句
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NjE4MTg1XX0=
+eyJoaXN0b3J5IjpbNDU0MjM1NjgyXX0=
 -->
